@@ -1,0 +1,73 @@
+.montserrat-<uniquifier > {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.fraunces-<uniquifier > {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+/* Global styling */
+:root {
+  /* Primary Color */
+  --c-green-500: hsl(158, 36%, 37%);
+  --c-green-700: hsl(158, 42%, 18%);
+
+  /* Neutral Colors */
+  --c-black: hsl(212, 21%, 14%);
+  --c-grey: hsl(228, 12%, 48%);
+  --c-cream: hsl(30, 38%, 92%);
+  --c-white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --f-montserrat: "Montserrat", sans-serif;
+  --f-fraunces: "Fraunces", serif;
+
+  /* Typography Preset */
+  /* Syntax: [font-weight] [font-size]/[line-height] [font-family] */
+  --text-preset-1: 700 2rem/100% var(--f-fraunces);
+  --text-preset-2: 700 0.875/ 110% var(--f-montserrat);
+  --text-preset-3: 500 0.875/ 160% var(--f-montserrat);
+  --text-preset-4: 500 0.75/ 120% var(--f-montserrat);
+  --text-preset-5: 500 0.8125/ 120% var(--f-montserrat);
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: var(--c-cream);
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: var(--c-white);
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
