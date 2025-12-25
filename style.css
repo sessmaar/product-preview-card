@@ -32,14 +32,16 @@
   /* Typography Preset */
   /* Syntax: [font-weight] [font-size]/[line-height] [font-family] */
   --text-preset-1: 700 2rem/100% var(--f-fraunces);
-  --text-preset-2: 700 0.875/ 110% var(--f-montserrat);
-  --text-preset-3: 500 0.875/ 160% var(--f-montserrat);
-  --text-preset-4: 500 0.75/ 120% var(--f-montserrat);
-  --text-preset-5: 500 0.8125/ 120% var(--f-montserrat);
+  --text-preset-2: 700 0.875rem/ 110% var(--f-montserrat);
+  --text-preset-3: 500 0.875rem/ 160% var(--f-montserrat);
+  --text-preset-4: 500 0.75rem/ 120% var(--f-montserrat);
+  --text-preset-5: 500 0.8125rem/ 120% var(--f-montserrat);
 }
 
 /* Global Reset */
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -56,18 +58,83 @@ picture {
 body {
   background: var(--c-cream);
   min-height: 100vh;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+}
+
+.picture img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  @media (min-width: 700px) {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.wrapper {
+  background-color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .content {
-  background-color: var(--c-white);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  @media (min-width: 700px) {
+    width: 100%;
+  }
 }
 
-.img {
-  width: 100%;
-  object-fit: cover;
+.content .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.text .h1 {
+  font: var(--text-preset-1);
+  color: var(--c-black);
+}
+
+.text p:first-child {
+  font: var(--text-preset-4);
+  color: var(--c-grey);
+  letter-spacing: 5px;
+}
+
+.text p:last-child {
+  font: var(--text-preset-3);
+  color: var(--c-grey);
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.pricing h2 {
+  font: var(--text-preset-1);
+  color: var(--c-green-500);
+}
+
+.pricing p {
+  font: var(--text-preset-5);
+  color: var(--c-grey);
+  text-decoration: line-through;
+  padding-block: 0.5rem;
 }
