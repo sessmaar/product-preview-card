@@ -138,3 +138,14 @@ body {
   text-decoration: line-through;
   padding-block: 0.5rem;
 }
+
+.mybutton {
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--c-green-500);
+  color: var(--c-white);
+  font: var(--text-preset-2);
+}
