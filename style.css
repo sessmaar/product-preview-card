@@ -71,10 +71,12 @@ body {
   border-radius: 8px 8px 0 0;
   @media (min-width: 700px) {
     border-radius: 8px 0 0 8px;
+    flex: 1;
   }
 }
 
 .wrapper {
+  width: 100%;
   background-color: var(--c-white);
   display: flex;
   flex-direction: column;
@@ -84,8 +86,8 @@ body {
   @media (min-width: 700px) {
     flex-direction: row;
     justify-content: center;
+    max-width: 600px;
     align-items: center;
-    text-align: center;
   }
 }
 
@@ -96,6 +98,7 @@ body {
   gap: 1.5rem;
   @media (min-width: 700px) {
     width: 100%;
+    padding: 2rem;
   }
 }
 
@@ -148,4 +151,10 @@ body {
   background-color: var(--c-green-500);
   color: var(--c-white);
   font: var(--text-preset-2);
+  border-radius: 8px;
+  padding-block: 1.094rem;
+}
+
+.mybutton:hover {
+  background-color: var(--c-green-700);
 }
